@@ -39,7 +39,7 @@ This setup/script automates the installation of Proxmox on Debian 12 and the cre
 1. Clone the repository to your Debian 12 system.
 ```bash
 # With git already installed on your machine, clone the repository
-git clone https://github.com/mathewalves/Proxmox-Debian12.git
+git clone https://github.com/aleixsr/Proxmox-Debian12.git
 
 # Access the downloaded folder with the 'cd' command
 cd /Proxmox-Debian12
