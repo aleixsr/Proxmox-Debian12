@@ -89,7 +89,7 @@ additional_packages()
     if whiptail --title "Installation of Additional Packages" --yesno "Do you want to install the additional packages?" 10 50; then
         clear
         # Installation of Additional Packages
-        install_nala
+        #install_nala
         install_sudo
         install_neofetch
         install_network_tools
