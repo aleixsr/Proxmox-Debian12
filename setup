@@ -133,7 +133,7 @@ pacotes_adicionais()
 install_sudo() 
 {
     echo -e "${cyan}Starting sudo installation...${default}"
-    nala install -y sudo
+    apt install -y sudo
 
     echo -e "${blue}Looking for users to grant sudo permissions...${default}"
 
@@ -174,7 +174,7 @@ install_sudo()
 instalar_sudo() 
 {
     echo -e "${cyan}Iniciando instalação do sudo...${default}"
-    nala install -y sudo
+    apt install -y sudo
 
     echo -e "${blue}Procurando usuários para adicionar permissões sudo...${default}"
 
@@ -235,7 +235,7 @@ install_neofetch()
     else
         echo -e "${cyan}Iniciando a instalação do 'neofetch' com 'nala'...${default}"
     fi
-    nala install -y neofetch
+    apt install -y neofetch
     if [ "$language" == "en" ]; then
         echo -e "${green}'neofetch' installed successfully!${default}"
     else
@@ -251,7 +251,7 @@ install_network_tools()
     else
         echo -e "${cyan}Iniciando a instalação de 'net-tools' e 'nmap' com nala...${default}"
     fi
-    nala install -y nmap && nala install -y net-tools
+    apt install -y nmap && apt install -y net-tools
     if [ "$language" == "en" ]; then
         echo -e "${green}Packages installed successfully!${default}"
     else
@@ -267,7 +267,7 @@ update_system()
     else
         echo -e "${cyan}Atualizando o sistema...${default}"
     fi
-    nala update -y && nala upgrade -y
+    apt update -y && apt upgrade -y
     if [ "$language" == "en" ]; then
         echo -e "${green}Update successful!${default}"
     else
