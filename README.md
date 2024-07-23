@@ -73,7 +73,13 @@ This setup/script automates the installation of Proxmox on Debian 12 and the cre
 
 7. Follow screen instructions and after several reboots all will should be installed. Check **listening ports**:
    ![](/Users/asola/Library/Application%20Support/marktext/images/2024-07-19-13-27-32-image.png)
-   If they're not listeing perform a new **reboot**.
+   If they're not listeing perform
+   
+   `rm -rf /etc/apt/sources.list.d/pve-enterprise.list
+   apt update && apt dist-upgrade-y
+   reboot`
+   
+   
 
 8. Remeber to <u>set a password to root user</u> and login using a browser [https://your_ip_address:8006]()
 
