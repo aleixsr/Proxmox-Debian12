@@ -13,7 +13,7 @@
 
 # Proxmox VE Installer on Debian 12 Bookworm
 
-This setup/script automates the installation of Proxmox on Debian 12 and the creation of a bridge to facilitate network configuration.
+This setup/script automates the installation of Proxmox on Debian 12 based on [official wiki post](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm) and the creation of a bridge to facilitate network configuration.
 
 **Note: This script is designed to run on a Debian 12 system. Make sure to have superuser permissions before executing the script.**
 
@@ -30,7 +30,7 @@ This setup/script automates the installation of Proxmox on Debian 12 and the cre
 - Installed Git
   
   ```bash
-  apt update && apt upgrade && apt install -y git
+  apt update && apt dist-upgrade && apt install -y git
   ```
 
 - (Important) Clone the repository from the directory:
@@ -73,8 +73,8 @@ This setup/script automates the installation of Proxmox on Debian 12 and the cre
 
 7. Follow screen instructions and after several reboots all will should be installed. Check **listening ports**:
    ![](/Users/asola/Library/Application%20Support/marktext/images/2024-07-19-13-27-32-image.png)
-   If they're not listeing perform
    
+   If they're not listeing perform:   
    `rm -rf /etc/apt/sources.list.d/pve-enterprise.list
    apt update && apt dist-upgrade-y
    reboot`
