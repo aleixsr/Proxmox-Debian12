@@ -47,16 +47,18 @@ timedatectl
 
 
 
+## Installation Steps
 
+Always as root:
 
 ```bash
 su root
 ```
 
-Installed Git
+Install Git:
 
 ```bash
-apt update && apt dist-upgrade && apt install -y git
+apt update && apt dist-upgrade && apt install git
 ```
 
 (Important) Clone the repository from the directory:
