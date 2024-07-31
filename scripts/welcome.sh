@@ -83,7 +83,7 @@ main()
     if [ "$LANGUAGE" == "en" ]; then
         if whiptail --yesno "(Optional) Do you want to add a custom welcome screen?" 10 50 --yes-button "Yes" --no-button "No"; then
             add_welcome
-            ask_reboot
+            #ask_reboot
         else
             exit 1
         fi
