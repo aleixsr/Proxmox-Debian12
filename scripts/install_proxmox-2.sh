@@ -149,8 +149,9 @@ main()
 
     remove_start_script
     
-    cd /Proxmox-Debian12
-    ./scripts/welcome.sh
+    /Proxmox-Debian12/scripts/welcome.sh
+    
+    apt update -y && apt dist-upgrade -y
 
     if [ "$LANGUAGE" == "en" ]; then
         echo -e "${red}WARNING: ${yellow}System automatically restarted to complete the installation..."
