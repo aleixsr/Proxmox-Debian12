@@ -22,22 +22,48 @@ This setup/script automates the installation of Proxmox on Debian 12 based on [o
 - Installed Debian 12 Bookworm
 
 - Superuser permissions
-  
-  ```bash
-  su root
-  ```
 
-- Installed Git
-  
-  ```bash
-  apt update && apt dist-upgrade && apt install -y git
-  ```
+## Recommended Preinstallation Steps
 
-- (Important) Clone the repository from the directory:
-  
-  ```bash
-   cd /
-  ```
+### Fix Locale Missconfiguration
+
+Comment out the `AcceptEnv LANG LC_*` line in the local `/etc/ssh/sshd_config` file:
+
+```bash
+nano /etc/ssh/sshd_config
+systemctl restart ssh.service
+```
+
+
+
+### Set Time Zone
+
+Comment out the `AcceptEnv LANG LC_*` line in the local `/etc/ssh/sshd_config` file:
+
+```bash
+timedatectl set-timezone Europe/Madrid
+timedatectl
+```
+
+
+
+
+
+```bash
+su root
+```
+
+Installed Git
+
+```bash
+apt update && apt dist-upgrade && apt install -y git
+```
+
+(Important) Clone the repository from the directory:
+
+```bash
+ cd /
+```
 
 ## Usage Instructions
 
@@ -78,8 +104,6 @@ This setup/script automates the installation of Proxmox on Debian 12 based on [o
    `rm -rf /etc/apt/sources.list.d/pve-enterprise.list
    apt update && apt dist-upgrade-y
    reboot`
-   
-   
 
 8. Remeber to <u>set a password to root user</u> and login using a browser [https://your_ip_address:8006]()
 

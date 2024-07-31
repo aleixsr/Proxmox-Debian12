@@ -148,7 +148,9 @@ main()
     fi
 
     remove_start_script
-    configure_bridge
+    
+    cd /Proxmox-Debian12
+    ./scripts/welcome.sh
 
     if [ "$LANGUAGE" == "en" ]; then
         echo -e "${red}WARNING: ${yellow}System automatically restarted to complete the installation..."

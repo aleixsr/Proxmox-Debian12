@@ -277,8 +277,8 @@ main()
         whiptail --title "Configuração de Rede" --msgbox "Você pode configurar a bridge vmbr0 posteriormente executando o script /Proxmox-Debian12/scripts/configure_bridge.sh, ou através da interface web do Proxmox. Consulte a documentação do Proxmox para mais informações." 15 60
     fi
 
-    cd /Proxmox-Debian12
-    ./scripts/welcome.sh
+###    cd /Proxmox-Debian12
+###    ./scripts/welcome.sh
 }
 
 main
